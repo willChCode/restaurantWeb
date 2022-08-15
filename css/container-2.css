@@ -1,0 +1,298 @@
+header{
+    border: 2px solid none;
+}
+.container-2{
+    width: 90vw;
+    margin: 0 auto;
+    border: 2px solid none;
+    background-color: none;
+    padding: 10px 0;
+
+}
+.card2-img{
+    width: 100%;
+}
+.container-2 .card2{
+    display: flex;
+    flex-direction: column;
+    background-color: none;
+    margin: 30px 0;
+}
+.card2 .card2-titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: none;
+    height: 25vh;
+    width: 90%;
+    margin: 0 auto;
+}
+.card2-titulo h1{
+    font-size: 2.2em;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.card2-titulo p{
+    text-align: center;
+    color: rgb(139, 121, 121);
+}
+/*menu*/
+.container-2 .card2-menu{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+
+    margin: 20px auto;
+    border: 1px solid none;
+    gap: 10px;
+
+    width: 90%;
+    overflow: auto;
+}
+.card2-menu .card2-menu-item{
+    background-color: none;
+    border: 2px dotted salmon;
+    border-radius: 10px;
+    text-align: center;
+
+    width: 100%;
+    /*desde aqui dar elñ margin d mrd*/
+    margin-bottom: 18px;
+}   
+.card2-menu-item-img{
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card2-menu-item h3{
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+.card2-menu::-webkit-scrollbar{
+    background-color: none;
+    height: 7px;
+}
+.card2-menu::-webkit-scrollbar-thumb{
+    background-color: orangered;
+    border-radius: 10px;
+}
+.card2-menu::-webkit-scrollbar-track{
+    background: rgb(193, 186, 186);
+    margin-inline: 1em;
+    border-radius: 10px;
+}
+/*MENU CONTENIDO*/
+header{
+    border: 2px solid none;
+}
+.card2-contenido{
+    border: 2px solid none;
+    width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+    overflow: auto;
+    background-color: none;
+}
+.card2-contenido-item{
+    background-color: none;
+    border-radius: 10px;
+
+    box-shadow: 1px 1px 20px -5px rgba(0,0,0,0.60); 
+
+    margin-bottom: 18px;
+    margin-top: 20px;
+    /*ERROR SE MUESTRA ENCIMA DE MENU*/
+    position:relative;
+    z-index: 1;
+}
+.card2-contenido-item-img{
+    width: 200px;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.card2-contenido-item h3{
+    display: flex;
+    justify-content: space-between;
+
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(150, 150, 150, 0.60);
+    width: 100%;
+    padding: 5px 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.card2-contenido-item span{
+    color: rgb(26, 213, 26);
+}
+.card2-contenido::-webkit-scrollbar{
+    background-color: none;
+    height: 7px;
+}
+.card2-contenido::-webkit-scrollbar-track{
+    background-color: rgb(193, 186, 186);
+    margin-inline: 1em;
+    border-radius: 10px;
+}
+.card2-contenido::-webkit-scrollbar-thumb{
+    background-color: orangered;
+    border-radius: 10px;
+}
+.container-2 .boton-menu{
+    display: none;
+}
+
+/*DESKTOP*/
+@media (min-width:1115px){
+    header{
+        border: 2px solid none;
+    }
+    .container-2{
+        border: 1px solid none;
+        width: 100%;
+
+    }
+    .container-2 .card2{
+        background-color: none;
+
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-areas: 
+        "titulo titulo"
+        "menu contenido"
+        "menu boton";
+        
+    }
+    /*TITULO*/
+    .card2 .card2-titulo{
+        background-color: none;
+        width: 100%;
+
+        grid-area: titulo;
+    }
+    .card2-titulo h1{
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+    .card2-titulo p{
+        margin: 0 210px;
+        margin-bottom: 30px;
+        font-size: 1.1em;
+    }
+    /*MENU*/
+    .card2 .card2-menu{
+        width: 179px;
+        height: 43vh;
+        margin: 0;
+
+        grid-area: menu;
+
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+
+        padding-right: 22px;
+
+    }
+    .card2-menu-item{
+        background-color: none;
+        display: flex;
+        align-items: center;
+    }
+    .card2-menu-item-img{
+        width: 50px;
+        height: 50px;
+    }
+    .card2-menu-item h3{
+        color: black;
+        margin-left: 5px;
+    }
+    .card2-menu::-webkit-scrollbar{
+        width: 3px;
+    }
+    .card2-menu::-webkit-scrollbar-track{
+        background-color: rgb(177, 167, 167);
+        /*vertical*/
+        /*margin-block: 1em;*/
+    }
+    .card2-menu::-webkit-scrollbar-thumb{
+        background-color: orangered;
+    }
+
+    /*CONTENIDO*/
+    .card2 .card2-contenido{
+        background-color: none;
+        width: 100%;
+
+        grid-area: contenido;
+        gap: 30px;
+
+        padding-left: 60px;
+        
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+    .card2-contenido-item{
+        border: 1px solid none;
+        margin: 0;
+
+        border-radius: 20px;
+        background-color: none;
+        position: relative;
+    }
+    .card2-contenido-item .precio{
+        background: rgba(150, 150, 150, 0.60);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        padding: 10px 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        font-size: 1.3em;
+    }
+    .card2-contenido-item span{
+        color: rgb(26, 213, 26);
+    }
+
+    .card2-contenido-item-img{
+        width: 280px;
+        height: 100%;
+        border-radius: 20px;
+    }
+
+    /*BOTON MENU*/
+    .container-2 .boton-menu{
+        grid-area: boton;
+        display: block;
+        background-color: none;
+        margin: 10px auto;
+    }
+    .boton-menu .prevBM{
+        font-size: 45px;
+        color: orangered;
+        padding: 0 10px;
+        background: none;
+        margin-right: 20px;
+        border: none;
+        cursor: pointer;
+    }
+    .boton-menu .nextBM{
+        font-size: 45px;
+        background: none;
+        color: orangered;
+        padding: 0 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+}
